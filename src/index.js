@@ -1,26 +1,10 @@
-class Todo {
-    constructor (title,description, dueDate, priority) {
-        this.title = title;
-        this.description = description;
-        this.dueDate = dueDate;
-        this.priority = priority;
-    }
-}
+import Todo from "./modules/todo"
+import Project from "./modules/project"
 
-class Project {
-    constructor (title) {
-        this.title = title;
-        this.todos = [];
-    }
+window.defaultProject = new Project("default")
+window.proj = new Project("H2");
+window.newtodo = new Todo("title", "descr", 312, "312");
+window.obj = new Todo("title", "descr", 31321312, "31231231");
 
-    addTodo (todo) {
-        this.todos.push(todo)
-    }
-
-    getTodos () {
-        return this.todos;
-    }
-}
-
-const proj = new Project("H2");
-const newtodo = new Todo("312","312 world",312,"312");
+proj.addTodo(newtodo);
+proj.addTodo(obj);
