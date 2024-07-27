@@ -1,0 +1,29 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 6fr;
+    height: 98vh;
+}
+
+.header {
+    background-color: teal;
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+    font-size: 60px;
+}
+
+.navBar {
+    grid-row: 2/span 2;
+    background-color: antiquewhite;
+}
