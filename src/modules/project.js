@@ -16,11 +16,8 @@ class Project {
         this.title = newTitle;
     }
 
-    removeTodo (todoTitle) {
-        const updatedArr = this.todos.filter((todo) => { 
-            return todo.title != todoTitle;
-        }) 
-        this.todos = updatedArr;
+    removeTodo (index) {
+        this.todos.splice(index,1) 
     }
 
     clearTodos () {
